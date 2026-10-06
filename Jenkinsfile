@@ -11,6 +11,12 @@ pipeline{
                 sh 'docker build -t frontend .'
             }
         }
+        stage('delete old container'){
+            steps{
+                sh 'docker stop frontend-container || true'
+                sh 'docker rm frontend-container || true'
+            }
+        }
         stage('run'){
             steps{
 
