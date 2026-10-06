@@ -15,6 +15,7 @@ pipeline{
             steps{
                 sh 'docker stop frontend-container || true'
                 sh 'docker rm frontend-container || true'
+                // hello
             }
         }
         stage('run'){
