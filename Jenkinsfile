@@ -8,12 +8,12 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh 'docker build -t backend .'
+                sh 'docker build -t frontend .'
             }
         }
         stage('run'){
             steps{
-                sh 'docker -d -p 3004:3004 backend '
+                sh 'docker run -d --name frontend-container -p 3004:3004 frontend '
             }
         }
     }
