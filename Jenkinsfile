@@ -13,10 +13,9 @@ pipeline{
         }
         stage('run'){
             steps{
-<<<<<<< HEAD
+
                 sh 'docker run -d --name frontend-container -p 4200:4200 frontend '
-=======
->>>>>>> 9bedd6fed727a0ec949ff89eecadce2942cddc07
+
             }
         }
     }
