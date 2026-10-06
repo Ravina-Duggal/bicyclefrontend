@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('git clone'){
             steps{
-                git url: '' , branch: 'main'
+                git url: 'https://github.com/Ravina-Duggal/bicyclefrontend.git' , branch: 'main'
             }
         }
         stage('build'){
@@ -13,7 +13,10 @@ pipeline{
         }
         stage('run'){
             steps{
-                sh 'docker run -d --name frontend-container -p 3004:3004 frontend '
+<<<<<<< HEAD
+                sh 'docker run -d --name frontend-container -p 4200:4200 frontend '
+=======
+>>>>>>> 9bedd6fed727a0ec949ff89eecadce2942cddc07
             }
         }
     }
