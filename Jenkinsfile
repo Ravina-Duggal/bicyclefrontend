@@ -13,7 +13,7 @@ pipeline{
         }
         stage('run'){
             steps{
-                sh 'docker run -d -p 3004:3004 frontend'
+                sh 'docker run -d -p 4200:4200 frontend'
             }
         }
     }
